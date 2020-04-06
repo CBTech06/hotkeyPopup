@@ -3,8 +3,8 @@ You can modify the file .kb or create another one to add your shortcuts.
 You can modify script to change font or colors.
 
 Colors for command is COLOR in each files.
-TT is for Title C for command(shortcuts) T for simple text LINES for numbers of line in the file.
-P1-P6 for different part.
+[TT] is for Title. [C] for command(shortcuts). [T] for simple text. [LINES] for numbers of line in the file.
+[P1-P6] for different parts.
 
 You can add lines. You can add parts if you modify the script.
 
