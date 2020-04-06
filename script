@@ -1,0 +1,133 @@
+#Copyright (c) 2020 Bourgeois Christophe
+#
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
+#
+#The above copyright notice and this permission notice shall be included in all
+#copies or substantial portions of the Software.
+#
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#SOFTWARE.
+
+#!/usr/bin/env bash
+
+#     VARS
+x=20
+y=200
+screen_width=1240
+event_flags="onstart=uncollapse;button1=exit"
+file=$1
+#      FONTS
+font="JetBrainsMono Nerd Font:size=10"
+bold_font="JetBrainsMono Nerd Font:style=Extra Bold:size=10"
+
+#      COLORS
+fg_color=#FFFFFF
+bg_color=#353535
+color2=#FFFFFF
+
+txt="^fg(${color2})"
+mainTitle="^fn(${bold_font})^fg(${color2})"
+
+# Read File and parse it
+while read -r line; do
+	if [[ $line == *"<LINES>"* ]]; then
+		n_lines=${line/<LINES>/}
+	elif [[ $line == *"<COLOR>"* ]]; then
+		color1=${line/<COLOR>/}
+		cmd="^fg($color1)"
+	elif [[ $line == *"<P1>"* ]]; then
+		line=${line/<P1>/} line=${line//<C>/$cmd} line=${line//<T>/$txt} p1+=( "$line" )
+	elif [[ $line == *"<P2>"* ]]; then
+		line=${line/<P2>/} line=${line//<C>/$cmd} line=${line//<T>/$txt} p2+=( "$line" )
+	elif [[ $line == *"<P3>"* ]]; then
+		line=${line/<P3>/} line=${line//<C>/$cmd} line=${line//<T>/$txt} p3+=( "$line" )
+	elif [[ $line == *"<P4>"* ]]; then
+		line=${line/<P4>/} line=${line//<C>/$cmd} line=${line//<T>/$txt} p4+=( "$line" )
+	elif [[ $line == *"<P5>"* ]]; then
+		line=${line/<P5>/} line=${line//<C>/$cmd} line=${line//<T>/$txt} p5+=( "$line" )
+	elif [[ $line == *"<P6>"* ]]; then
+		line=${line/<P6>/} line=${line//<C>/$cmd} line=${line//<T>/$txt} p6+=( "$line" )
+	elif [[ $line == *"<TT>"* ]]; then
+		title+=( "${line/<TT>/$mainTitle}" ) 
+	elif [[ $line == *"<HEADER>"* ]]; then
+		headColor="^fg($color1)^fn(${bold_font})" 
+		header=${line/<HEADER>/$headColor} header+=( "$line" )
+	fi
+done  < "$file"
+
+#Print all parts
+title_name=${title[0]}
+
+show_part1()
+{
+	for i in "${p1[@]}"
+	do
+		echo "               $i"
+	done
+
+}
+
+show_part2() {
+	for i in "${p2[@]}"
+	do
+		echo "               $i"
+	done
+}
+
+show_part3() {
+	for i in "${p3[@]}"
+	do
+		echo "               $i"
+	done
+}
+
+show_part4() {
+	for i in "${p4[@]}"
+	do	
+		echo "               $i"
+	done
+}
+
+show_part5() {
+	for i in "${p5[@]}"
+	do
+		echo "               $i"
+	done
+}
+
+show_part6() {
+	for i in "${p6[@]}"
+	do
+		echo "               $i"
+	done
+}
+
+(
+ echo "${title[0]}"
+ echo "         ${header}"
+ echo " "
+ echo "      ${title[1]} "
+ show_part1
+ echo "      ${title[2]} "
+ show_part2
+ echo "      ${title[3]} "
+ show_part3
+ echo "      ${title[4]} "
+ show_part4
+ echo "      ${title[5]} "
+ show_part5
+ echo "      ${title[6]} "
+ show_part6
+ echo "         $header"
+ ) | dzen2 -p -fn "${font}" -bg "${bg_color}" -fg "${fg_color}" -x "${x}" -y "${y}" -w "${screen_width}" -l "${n_lines}" -sa 'l' -ta 'c' -e "${event_flags}" 
+

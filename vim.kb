@@ -1,0 +1,58 @@
+#Copyright (c) 2020 Bourgeois Christophe
+#
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
+#
+#The above copyright notice and this permission notice shall be included in all
+#copies or substantial portions of the Software.
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#SOFTWARE.
+
+<LINES>38
+<COLOR>#FA00A2
+
+<TT>      [ VIM Keybindings ]
+<TT>      Cursor Movement: 
+<TT>      Find/Search:
+<TT>      Visual:
+<TT>      Buffers/Tabs:
+<TT>      Insert:
+<TT>      Command:
+<HEADER>----------------------------------------------------------------------------------------------------------------------------------------
+<P1>
+<P1><C>       gg/G           <T>Scroll BOF / EOF|GotoLine   <C>0/$       <T>BOL/EOL                <C>zb/zt/zz  <T>Scroll bottom/top/center
+<P1><C>       b/B            <T>Prev word/Prev WORD         <C>|         <T>BOL/Goto col           <C>{/}       <T>Paragraph begin/end
+<P1><C>       H/L/M          <T>Move to Top/Bottom/Middle   <C>e/E       <T>End word/End WORD      <C>(/)       <T>Sentence Begin/End
+<P1><C>       w/W            <T>Next word/Next WORD         <C>-/+       <T>Prev/Next line 
+<P1>
+<P2>
+<P2><C>       #              <T>Reverse find under cursor    <C>noh       <T>Remove highlighting      <C>;         <T>Repeat t/T/f/F
+<P2><C>       *              <T>Find word under cursor       <C>n         <T>Next search match        <C>N         <T>Prev search match
+<P2><C>       :s/word/str/g  <T>Replace word by str          <C>&         <T>Repeat :s                        
+<P2>
+<P3>
+<P3><C>       >              <T>Indent                       <C><         <T>Unindent                 <C>yw        <T>Yank word
+<P3><C>       ~              <T> Change case(CAPS)           <C>d/D       <T>Delete/Delete line       <C>y/Y       <T>Yank/Yank Line
+<P3>
+<P4>
+<P4><C>       :tabnew <file> <T>Open new file in tab         <C>Ctrl+wq   <T>Quit windows             <C>:v/hsplit   <T>Split V/H
+<P4><C>       gt/gT/#gt      <T>Tab Next/Prev/Tab#           <C>:ls       <T>List all buffers         <C>Ctrl+ww     <T>Switch Windows
+<P4>
+<P5>
+<P5><C>       a/A            <T>Append/Append at EOL         <C>i/I       <T>Insert/Insert at BOL     <C>o/O       <T>Open below/Open above 
+<P5><C>       C              <T>Change to EOL                <C>R         <T>Replace mode             <C>S         <T>Subst line 
+<P5>
+<P6>
+<P6><C>       u/U            <T>undo/Undo Line               <C>.         <T>Repeat command           <C>J         <T>Join lines
+<P6><C>       Ctrl+r         <T>Redo                         <C>gf        <T>Open file under cursor   <C>x         <T>delete char
+<P6><C>       p/P            <T>Paste After/Before           <C>r         <T>Replace char             <C>dd/dw     <T>delete line/word
+<P6>

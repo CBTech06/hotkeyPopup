@@ -1,0 +1,58 @@
+#Copyright (c) 2020 Bourgeois Christophe
+#
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
+#
+#The above copyright notice and this permission notice shall be included in all
+#copies or substantial portions of the Software.
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#SOFTWARE.
+
+<LINES>37
+<COLOR>#00B4FA
+
+<TT>      [ I3 Keybindings ]
+<TT>      I3:
+<TT>      Client:
+<TT>      Launcher:
+<TT>      Screen:
+<TT>      Layout:
+<TT>     Containers:
+<HEADER>----------------------------------------------------------------------------------------------------------------------------------------
+<P1>
+<P1><C>     Meta+x            <T>Exit menu               <C>Meta+Shift+r       <T>Reload Conf.         <C>Print             <T>Take screenshot
+<P1>
+<P2>
+<P2><C>     Meta+c            <T>Kill client             <C>Meta+f             <T>Fullscreen           <C>Meta+q            <T>Focus parent
+<P2><C>     Meta+a            <T>Focus child 
+<P2>
+<P3>
+<P3><C>     Meta+Return       <T>Terminal                <C>Meta+d             <T> Rofi run            <C>Meta+w            <T>Rofi window
+<P3><C>     Meta+Shit+F10     <T>Firefox[PN]
+<P3>
+<P4>
+<P4><C>     Meta+Left         <T>Focus Left              <C>Meta+Right         <T>Focus Right          <C>Meta+Up           <T> Focus Up 
+<P4><C>     Meta+Shift+Left   <T>Previous Workspace      <C>Meta+Shift+Right   <T>Next Workspace       <C>Meta+[1-10]       <T> Focus [1-10] 
+<P4>
+<P5>
+<P5><C>     Meta+s            <T>Layout stacking         <C>Meta+z             <T>Layout tabbed        <C>Meta+Shift+s      <T>Toggle [STKY]
+<P5><C>     Meta+e            <T>Toggle split            <C>Meta+Tab           <T>Toggle floating      <C>Meta+Space        <T>Swap         
+<P5><C>     Meta+Shift+Space  <T>Set Swap 
+<P5>
+<P6>
+<P6><C>     Meta+Shift+j      <T>Move Left               <C>Meta+Shift+M       <T>Move Right           <C>Meta+Shift+k      <T>Move Down
+<P6><C>     Meta+Shift+l      <T>Move Up                 <C>Meta+Shift+[1-10]  <T>Move [1-10]          <C>Meta+ctrl+Left  <T>Move to Left screen
+<P6><C>     Meta+ctrl+Right   <T>Move to Right screen    <C>Meta+h             <T>Split H              <C>Meta+v            <T>Split V
+<P6><C>     Meta+Escape       <T>Switch Back_Forth       <C>Meta+n             <T>Move to ScratchPad   <C>Meta+Shift+n      <T>Show Scratchpad
+<P6>
+
+
